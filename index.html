@@ -625,7 +625,25 @@
                         <div class="flex bin">
 
 
-        
+                             <div class="contact">
+                                <div class="contract_address">
+                                    <div class="dd">
+                                       <img id="cpy_btn" src="img/copy.png" onclick="myFunction()" alt=""> 
+                                       <div class="dd_hidden" id="dd_hidden">
+                                            Copied
+                                       </div>
+                                    </div>
+                                    <span id="cpy"> 0x9f583e512ef9B234054C07b61388fB73BE54F9c5</span>
+                                </div>
+                                <div class="contract_row">
+                                    <div class="contract_start_price">
+                                        Start price: <span> 0.001$</span>
+                                    </div>
+                                    <div class="contract_btn">
+                                        <a class="basic-btn blue" href="https://poocoin.app/tokens/0x9f583e512ef9b234054c07b61388fb73be54f9c5" target="_blank">Chart</a>
+                                    </div>
+                                </div>
+                             </div>   
 
 
                         </div>
@@ -646,7 +664,7 @@
                                     Games, and more, in one single place. </p>
                                 <div class="buttons-wrapper">
                                     <a class="basic-btn blue" href="https://exchange.biswap.org/#/swap?outputCurrency=0x9f583e512ef9B234054C07b61388fB73BE54F9c5" target="_blank">Buy token</a>
-                            
+                                    <!-- <a class="basic-btn white" href="/" target="_blank">Chart</a> -->
                                 </div>
                             </div>
                             <div class="floating-images">
@@ -1168,6 +1186,27 @@
                 /* ]]> */
             </script>
             <script type='text/javascript' src='https://magicsquare.io/wp-content/themes/starter-theme/build/js/ajax.js?ver=1' id='ajax_custom_script-js'></script>
-</body>
+
+            <script>
+                
+        /* сохраняем текстовое поле в переменную text */
+        var text = document.getElementById("cpy").innerHTML;
+
+        /* сохраняем кнопку в переменную btn */
+        var btn = document.getElementById("cpy_btn");
+
+        /* вызываем функцию при нажатии на кнопку */
+        btn.onclick = function() {
+            navigator.clipboard.writeText(text);    
+            document.execCommand("copy");
+     
+            document.getElementById('dd_hidden').style.display = 'flex';
+            setTimeout(function(){
+                document.getElementById('dd_hidden').style.display = 'none';
+    }, 1000); 
+        }
+            </script>
+
+        </body>
 
 </html>

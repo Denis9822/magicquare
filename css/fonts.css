@@ -148,3 +148,89 @@
     margin-bottom: 0;
     margin-top: 0;
 }
+.contract_row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contract_address{
+    color: #f71278;
+    font-weight: 500;
+}
+.contract_btn .blue{
+    background: #4056f7;
+    margin-left: 1vmax;
+    padding: 0.2em 1em;
+    font-size: 13px;
+}
+.contract_row{
+    margin-top: 7px;
+}
+.contract_start_price{
+    color: black;
+    font-weight: 400;
+}
+.contract_start_price span{
+    font-weight: 500;
+}
+.contract_address{
+    display: flex;
+    align-items: center;
+}
+.contract_address img{
+    width: 17px;
+    height: auto;
+    margin-right: 7px;
+    cursor: pointer;
+}
+.contact{
+    margin-right: 40px;
+}
+.dd{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.dd_hidden{
+    width: 70px;
+    height: 30px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: -25px;
+    border: 1px solid silver;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1024px) {
+    header.header .container .flex{
+        margin-left: auto;
+        width: auto !important;
+    }
+    .contact{
+        margin-right: 10px;
+    }
+    header.header .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    header.header .container .flex{
+        margin-right: auto;
+    }
+    .contact{
+        margin-right: 0;
+    }
+    .logo{
+        margin-top: -11px;
+    }
+}
